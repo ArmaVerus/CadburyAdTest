@@ -1,0 +1,240 @@
+html
+{
+    
+}
+
+body
+{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+.CB_container
+{
+    overflow: hidden;
+    position: fixed;
+    width: screen;
+    padding: 0;
+}
+
+@media screen and (min-height: 1334px)
+{
+    .CB_container
+    {
+        zoom: 100%
+    }
+}
+
+@media screen and (max-height: 1333px) and (min-height: 1280px)
+{
+    .CB_container
+    {
+        zoom: 96%
+    }
+}
+
+@media screen and (max-height: 1279px) and (min-height: 1136px)
+{
+    .CB_container
+    {
+        zoom: 86%
+    }
+}
+
+@media screen and (max-height: 1135px) and (min-height: 800px)
+{
+    .CB_container
+    {
+        zoom: 59%
+    }
+}
+
+@media screen and (max-height: 799px)
+{
+    .CB_container
+    {
+        zoom: 48%
+    }
+}
+
+img 
+{
+}
+
+.CB_main
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.Ad_content_bg
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    margin-left: 0px
+        
+}
+
+.Ad_logo
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -2;
+}
+
+.Ad_instruction
+{
+    position: absolute;
+    top: 200px;
+    left: 375px;
+    float: left;
+    margin-left: -252px;
+    z-index: 1;
+}
+
+.join
+{
+    position: absolute;
+    top: 220px;
+    left: 40px;
+    z-index: 1;
+    opacity: 0%;
+}
+
+.EggShadow
+{
+    position: absolute;
+    top: 1150px;
+    left: 375px;
+    float: left;
+    margin-top: -67px;
+    margin-left: -153px;
+    z-index: -1;
+    animation: fade 1s infinite;
+}
+
+.Egg
+{
+    position: relative;
+    bottom: 335px;
+    left: 374px;    
+    margin-top: -171px;
+    margin-left: -124px;
+    z-index: 0;
+    animation: bounce 1s infinite;
+    animation-fill-mode: forwards;
+    
+}
+
+.Break
+{
+    pointer-events: none;
+    position: absolute;
+    bottom: 650px;
+    left: 200px;
+    width: 325px;
+    height: 345px;
+    /*animation: follow 1s infinite;*/
+    opacity: 0%;
+    
+}
+
+.BreakAnimated
+{
+    animation: expand 0.5s 
+}
+
+.paused
+{
+    animation: paused !important;
+    opacity: 0%; !important;
+    pointer-events: none;
+}
+
+.WhiteFade
+{
+    position: absolute;
+    z-index: 10;
+    bottom: 177px;
+    opacity: 0%;
+    pointer-events: none;
+}
+
+.FadeToWhite
+{
+    animation: whiteout 1s;
+}
+
+.DuckButton
+{
+    opacity: 0%;
+    position: absolute;
+    bottom: 700px;
+    left: 90px;
+    pointer-events: none;
+    animation: clickme 0.6s infinite;
+}
+
+.DuckButtonEnter
+{
+    pointer-events: all;
+    animation: enterscene 1s;
+    animation-delay: 0.5s;
+}
+
+@keyframes enterscene
+{
+    0%{opacity: 0%; transform: scale(3)}
+    90%{opacity: 100%; transform: scale (0.9)}
+    100%{opacity: 100%; transform: scale (1)}
+    
+}
+
+@keyframes clickme
+{
+    0%{transform: scale(1)}
+    50%{transform: scale(1.05)}
+    100%{transform: scale (1)}
+}
+
+@keyframes whiteout
+{
+    0%{opacity: 0%}
+    50%{opacity: 100%}
+    100%{opacity: 0%}
+}
+
+@keyframes expand
+{
+    0%{opacity: 100%; transform: scale(1)}
+    100%{opacity: 100; transform: scale(3)}
+}
+
+@keyframes bounce {
+        0%   { transform: scale(1,1)    translateY(0); }
+        20%  { transform: scale(1.2,.8) translateY(30px); }
+        60%  { transform: scale(1,1) translateY(-550px); }
+        100%  { transform: scale(1,1)    translateY(0); }
+}
+
+@keyframes fade 
+{
+    20% {opacity:100%}
+    60% {opacity: 40%}
+    100% {opacity: 100%}
+}
+
+@keyframes follow
+{
+        0%   { transform: translateY(0); }
+        20%  { transform: translateY(30px); }
+        60%  { transform: translateY(-550px); }
+        100% { transform: translateY(0); }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Cadbury Easter</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="jquery/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div class="CB_container">
+            <div id="CB_landscape"></div>
+            <div class="CB_main">
+                <img src="assets/Background.png" class="Ad_content_bg">
+                <img src="assets/CadburyLogoG.png" class="Ad_logo">
+                <div class="Ad_instruction">
+                    <img src="assets/CrackTheEgg.png" class="crack_egg">
+                </div>
+                    <img src="assets/JoinTheHunt.png" class="join">
+                <div class="Animated_egg">
+                    <div id="EggJump">
+                        <img src="assets/GoldenEgg.png" class="Egg" onclick="this.classList.toggle('paused'); ">
+                        <img src="assets/ShatterShard.png" class="Break">
+                    </div>
+                    <img src="assets/EggShadow.png" class="EggShadow">
+                </div>
+                <div class="WhiteFlash">
+                    <img src="assets/FadeWhite.png" class="WhiteFade">
+                </div>
+                <div class="ClickHere">
+                    <a href="https://www.cadbury.co.uk/">
+                        <img src="assets/WebsiteButtonDuck.png" class="DuckButton">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.Egg').click(function() {
+            $('.EggShadow').toggleClass('paused');
+            $('.Break').toggleClass('BreakAnimated');
+            $('.WhiteFade').toggleClass('FadeToWhite');
+            $('.DuckButton').toggleClass('DuckButtonEnter');
+            setTimeout(function()
+                       {
+                $('.crack_egg').css('opacity', '0');
+                $('.join').css('opacity', '1');
+            },510);
+            setTimeout(function(){
+                $('.DuckButton').css('opacity', '1');
+                $('.DuckButton').css('pointer-events', 'all');
+                $('.DuckButton').removeClass('DuckButtonEnter');
+            },1500);
+            });
+        </script>
+        
+    </body>
+</html>
